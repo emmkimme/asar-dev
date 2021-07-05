@@ -25,6 +25,7 @@ program.command('pack <dir> <output>')
   .option('--unpack <expression>', 'do not pack files matching glob <expression>')
   .option('--unpack-dir <expression>', 'do not pack dirs matching glob <expression> or starting with literal <expression>')
   .option('--exclude-hidden', 'exclude hidden files')
+  .option('--follow-links', 'treat a link as a directory')
   .action(function (dir, output, options) {
     options = {
       unpack: options.unpack,
@@ -33,7 +34,8 @@ program.command('pack <dir> <output>')
       version: options.sv,
       arch: options.sa,
       builddir: options.sb,
-      dot: !options.excludeHidden
+      dot: !options.excludeHidden,
+      follow: options.followLinks
     }
     asar.createPackageWithOptions(dir, output, options, function (error) {
       if (error) {
