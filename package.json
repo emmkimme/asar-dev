@@ -1,11 +1,11 @@
 {
-  "name": "asar-link",
-  "description": "Creating Electron app packages with directory link management",
+  "name": "asar-dev",
+  "description": "Creating Electron app develppment packages with directory link management",
   "version": "0.0.1",
   "main": "./lib/asar.js",
   "types": "./lib/index.d.ts",
   "bin": {
-    "asar": "./bin/asar-link.js"
+    "asar-dev": "./bin/asar.js"
   },
   "files": [
     "bin",
