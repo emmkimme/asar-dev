@@ -24,6 +24,14 @@
   "bugs": {
     "url": "https://github.com/emmkimme/asar-link/issues"
   },
+  "keywords": [
+    "electron",
+    "asar",
+    "archive",
+    "symbolic link",
+    "link",
+    "development"
+  ],
   "scripts": {
     "mocha": "xvfb-maybe electron-mocha --reporter spec && mocha --reporter spec",
     "test": "npm run lint && npm run mocha",
